@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <TextView
+        android:id="@+id/wifiLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="28dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="52dp"
+        android:text="Wifi Strength:"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/wifiRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="26dp"
+        android:layout_marginStart="26dp"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/wifiLabel"
+        app:layout_constraintTop_toTopOf="@+id/wifiLabel" />
+
+    <TextView
+        android:id="@+id/wifiValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="0dp"
+        android:text="50 Mb/s"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@id/wifiRating"
+        app:layout_constraintTop_toTopOf="@+id/wifiLabel" />
+
+    <Button
+        android:id="@+id/wifiButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="12dp"
+        android:background="#0000"
+        android:text="See wifi Signal History"
+        app:layout_constraintStart_toStartOf="@+id/wifiRating"
+        app:layout_constraintTop_toBottomOf="@+id/wifiLabel" />
+
+    <TextView
+        android:id="@+id/dataLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="28dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="14dp"
+        android:text="Data Strength:"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/wifiButton" />
+
+    <TextView
+        android:id="@+id/dataRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintTop_toTopOf="@+id/dataLabel"
+        app:layout_constraintStart_toStartOf="@id/wifiRating"
+        tools:layout_editor_absoluteX="181dp" />
+
+    <TextView
+        android:id="@+id/dataValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="0dp"
+        android:text="10 Mb/s"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@id/dataRating"
+        app:layout_constraintTop_toTopOf="@+id/dataLabel" />
+
+    <Button
+        android:id="@+id/dataButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="12dp"
+        android:background="#0000"
+        android:text="See Data Signal History"
+        app:layout_constraintStart_toStartOf="@+id/dataRating"
+        app:layout_constraintTop_toBottomOf="@+id/dataLabel" />
+
+    <TextView
+        android:id="@+id/cellLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="28dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="14dp"
+        android:text="Cell Strength:"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dataButton" />
+
+    <TextView
+        android:id="@+id/cellRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintTop_toTopOf="@+id/cellLabel"
+        app:layout_constraintStart_toStartOf="@id/wifiRating"
+        tools:layout_editor_absoluteX="181dp" />
+
+    <TextView
+        android:id="@+id/cellValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="0dp"
+        android:text="10 Mb/s"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@id/cellRating"
+        app:layout_constraintTop_toTopOf="@+id/cellLabel" />
+
+    <Button
+        android:id="@+id/cellButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="12dp"
+        android:background="#0000"
+        android:text="See Cell Signal History"
+        app:layout_constraintStart_toStartOf="@+id/cellRating"
+        app:layout_constraintTop_toBottomOf="@+id/cellLabel" />
+
+    <ImageButton
+        android:id="@+id/refreshButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="22dp"
+        android:layout_marginTop="18dp"
+        android:contentDescription="Refresh Signals"
+        android:background="@drawable/ic_refresh_black_24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/loadButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="28dp"
+        android:textSize="22sp"
+        android:textColor="#5a8dab"
+        android:background="#0000"
+        android:text="View Current Map  >"
+        app:layout_constraintStart_toStartOf="@+id/cellLabel"
+        app:layout_constraintTop_toBottomOf="@+id/cellButton" />
+
+    <Button
+        android:id="@+id/newButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="18dp"
+        android:textSize="22sp"
+        android:textColor="#5a8dab"
+        android:background="#0000"
+        android:text="Create a New Map  >"
+        app:layout_constraintStart_toStartOf="@+id/loadButton"
+        app:layout_constraintTop_toBottomOf="@+id/loadButton" />
+
+</android.support.constraint.ConstraintLayout>

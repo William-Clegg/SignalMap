@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Signal Map</string>
+    <string name="title_activity_maps">Map</string>
+
+    <string-array name="wifiStrengths">
+        <item>Very Good</item>
+        <item>Good</item>
+        <item>Fair</item>
+        <item>Weak</item>
+        <item>Very Weak</item>
+    </string-array>
+</resources>

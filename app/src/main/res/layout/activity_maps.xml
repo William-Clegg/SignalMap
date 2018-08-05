@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mapLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MapsActivity" />
+
+    <View
+        android:id="@+id/drawing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#0000"/>
+
+    <ImageButton
+        android:id="@+id/beginDraw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/ic_edit_black_24dp"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/finishDraw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/ic_done_black_24dp"
+        android:visibility="gone"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/readjustCamera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="0dp"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        android:background="@drawable/ic_map_black_24dp"
+        map:layout_constraintEnd_toEndOf="@id/finishDraw"
+        map:layout_constraintTop_toBottomOf="@+id/finishDraw" />
+
+    <ImageButton
+        android:id="@+id/searchAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/ic_search_black_24dp"
+        map:layout_constraintBottom_toBottomOf="parent"
+        map:layout_constraintStart_toEndOf="@+id/addressField" />
+
+    <EditText
+        android:id="@+id/addressField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Enter where you want to map"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="50dp"
+        android:background="#d3d3d3"
+        map:layout_constraintBottom_toBottomOf="parent"
+        map:layout_constraintEnd_toEndOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>
